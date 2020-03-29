@@ -1,0 +1,22 @@
+@import "./assets/scss/styles.scss";
+
+.global {
+  background-color: $negro;
+  height: auto;
+  font-family: $fuentePrincipal;
+  @include tablet {
+    background-color: unset;
+    background-image: url(../src/assets/images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left center;
+  }
+}
+
+a {
+  color: $gris2;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}

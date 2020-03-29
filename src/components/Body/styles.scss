@@ -1,0 +1,107 @@
+@import "../../assets/scss/styles.scss";
+
+.contenedor {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.formulario-login {
+  @include tablet {
+    margin-top: 1rem;
+    margin-bottom: 6rem;
+    padding: 64px;
+    background-color: rgba(0, 0, 0, 0.85);
+    max-width: 450px;
+  }
+}
+
+form {
+  legend {
+    color: $blanco;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 28px;
+  }
+  .campo {
+    display: flex;
+    position: relative;
+    margin-bottom: 0.9rem;
+    input {
+      flex: 1;
+      padding: 1.4rem 1rem 0.7rem 1rem;
+      border-radius: $radius;
+      background-color: $gris;
+      border: none;
+      &:focus {
+        background-color: $gris3;
+        outline: none;
+        + label {
+          font-size: 0.6rem;
+          top: 0.5rem;
+        }
+      }
+    }
+    label {
+      color: $gris2;
+      position: absolute;
+      top: 1.1rem;
+      left: 1rem;
+      transition: font-size 0.2s ease, top 0.2s ease;
+    }
+    .barra {
+      border-top: 1px solid $secundario;
+    }
+  }
+  p {
+    margin-top: 0;
+    color: $secundario;
+    font-size: 0.8rem;
+  }
+  .submit {
+    display: flex;
+    margin-top: 2.5rem;
+
+    input[type="submit"] {
+      @include boton($primario);
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .acciones {
+    margin: 0.8rem 0 3rem 0;
+    color: $gris2;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+  }
+}
+
+.contenido-inferior {
+  display: flex;
+  flex-direction: column;
+  color: $gris2;
+  margin-bottom: 50px;
+
+  a {
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    padding-bottom: 1rem;
+
+    img {
+      margin-right: 1rem;
+      width: 50px;
+    }
+  }
+
+  .nuevo-usuario {
+    font-size: 1rem;
+
+    span {
+      color: $blanco;
+      margin-left: 5px;
+    }
+  }
+}
